@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+     layui.use('element',function(){
+	  var element=layui.element();
+	  element.on('nav(demo)',function(elem){
+		  layer.msg(elem.text());
+	  });
+  });
+  </script>
+</head>
+<body>
+<div id="top-nav">
+<ul class="layui-nav" lay-filter="">
+  <li class="layui-nav-item">
+    <a href="javascript:;">政务和公益顶级域名DNS日志统计分析</a>
+    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+      <dd><a href="../zcj/judns.html">政务公益解析系统所有节点日查询总量</a></dd>
+      <dd><a href="../zcj/zwandgyeachnode.html">政务公益解析系统各节点日查询总量</a></dd>
+      <dd><a href="../zcj/zwandgyquerytype.html">政务公益解析系统每日各类型查询量</a></dd>
+      <dd><a href="../zcj/zwandgyillegequery.html">政务公益解析系统每日非法查询量</a></dd>
+      <dd><a href="../zcj/zwandgyquerylogtype.html">政务公益解析系统各查询记录类型统计</a></dd>
+      <dd><a href="../zcj/IPtop1K.html">请求IP来源查询量TOP 1K</a></dd>
+      <dd><a href="../zcj/vipdomainquery.html">重点监控域名查询量</a></dd>
+      <dd><a href="../zcj/domaintop1K.html">域名查询量TOP 1K</a></dd>
+      <dd><a href="../zcj/realtimequery.html">实时查询量</a></dd>
+      <dd><a href="../zcj/nxdomain.html">NXDOMAIN实时统计数据</a></dd>
+      <dd><a href="../zcj/servfail.html">SERVFAIL实时统计数据</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item" lay-filter="">
+  	<a href="javascript:;">注册商域名业务DNS</a>
+  	<dl class="layui-nav-child">
+  		<dd><a href="../zcs/registrarDNSquery.html">注册商解析平台DNS日查总量</a></dd>
+  		<dd><a href="../zcs/registrareachnodequery.html">平台各节点DNS日查询总量</a></dd>
+  		<dd><a href="../zcs/registrardomaintype.html">平台每日各类型域名查询量</a></dd>
+  		<dd><a href="../zcs/registrarillegequery.html">平台每日非法查询量</a></dd>
+  		<dd><a href="../zcs/registrarquerylogtype.html">平台各查询记录类型统计</a></dd>
+  		<dd><a href="../zcs/registrarIPtop1K.html">请求IP来源查询量TOP 1K</a></dd>
+  		<dd><a href="../zcs/registrarvipdomain.html">重点监控域名查询量</a></dd>
+  		<dd><a href="../zcs/registrardomainTop1K.html">域名查询量TOP 1k</a></dd>
+  	</dl>
+  </li>
+	<li class="layui-nav-item" lay-filter="">
+		<a href="javascript:;">标识证书生成系统日志统计分析</a>
+		<dl class="layui-nav-child">
+			<dd><a href="../bzzs/webIDlog.html">网站身份标识生成系统每日访问量</a></dd>
+		</dl>
+	</li>
+	<li class="layui-nav-item" lay-filter="">
+		<a href="javascript:;">BSZS系统日志统计分析</a>
+		<dl class="layui-nav-child">
+			<dd><a href="../bszs/bszsaccess.html">BSZS系统每天访问总量</a></dd>
+			<dd><a href="../bszs/BszsSecondAccess">BSZS系统每天每秒访问峰值</a></dd>
+			<dd><a href="../bszs/BszsGetResourceByte.html">BSZS系统每天获取资源文件Byte大小</a></dd>
+			<dd><a href="../bszs/BszsGetResourceWay.html">BSZS系统资源获取方式类型统计</a></dd>
+			<dd><a href="../bszs/BszsGetResourceAgree.html">BSZS系统资源获取协议类型统计</a></dd>
+			<dd><a href="../bszs/BszsGetResourceCode.html">BSZS系统资源获取返回代码类型统计</a></dd>
+			<dd><a href="../bszs/BszsUserBrowser.html">BSZS系统用户使用浏览器类型统计</a></dd>
+			<dd><a href="../bszs/BszsUserIPTop.html">BSZS系统用户IP来源TOP分析</a></dd>
+			<dd><a href="../bszs/BszsResourceAccessTop.html">BSZS系统请求资源文件访问量TOP信息</a></dd>
+			<dd><a href="../bszs/BszsRefererAccess.html">BSZS系统Referer访问量TOP信息</a></dd>
+		</dl>
+	</li>
+	<li class="layui-nav-item" lay-filter="">
+		<a href="javascript:;">SI系统日志统计分析</a>
+		<dl class="layui-nav-child">
+			<dd><a href="../si/SiAccess.html">SI系统每天访问总量</a></dd>
+			<dd><a href="../si/SiSecondAccess.html">SI系统每天每秒访问峰值</a></dd>
+			<dd><a href="../si/SiGetResourceByte.html">SI系统每天获取资源文件Byte大小</a></dd>
+			<dd><a href="../si/SiGetResourceWay.html">SI系统资源获取方式类型统计</a></dd>
+			<dd><a href="../si/SiGetResourceAgree.html">SI系统资源获取协议类型统计</a></dd>
+			<dd><a href="../si/SiGetResourceCode.html">SI资源获取返回代码类型统计</a></dd>
+			<dd><a href="../si/SiUserBrowser.html">SI系统用户使用浏览器类型统计</a></dd>
+			<dd><a href="../si/SiUserIPTop.html">SI系统用户IP来源TOP统计分析</a></dd>
+			<dd><a href="../si/SiResourceAccessTop.html">SI系统请求资源文件访问量TOP信息</a></dd>
+			<dd><a href="../si/SiRefererAccess.html">SI系统Referer访问量TOP信息</a></dd>
+		</dl>
+	</li>
+	<li class="layui-nav-item" lay-filter="">
+		<a href="javascript:;">GL系统日志统计分析</a>
+		<dl class="layui-nav-child">
+			<dd><a href="../gl/GlAccess.html">GL系统每天访问总量</a></dd>
+			<dd><a href="../gl/GlSecondAccess.html">GL系统每天每秒访问峰值</a></dd>
+			<dd><a href="../gl/GlGetRegsourceByte.html">GL系统每天获取资源文件Byte大小</a></dd>
+			<dd><a href="../gl/GlGetResourceWay.html">GL系统资源获取方式类型统计</a></dd>
+			<dd><a href="../gl/GlGetResourceAgree.html">GL系统资源获取协议类型统计</a></dd>
+			<dd><a href="../gl/GlGetResourceCode.html">GL资源获取返回代码类型统计</a></dd>
+			<dd><a href="../gl/GlUserBrowser.html">GL系统用户使用浏览器类型统计</a></dd>
+			<dd><a href="../gl/GlUserIPTop.html">GL系统用户IP来源TOP统计分析</a></dd>
+			<dd><a href="../gl/GlResourceAccessTop.html">GL系统请求资源文件访问量TOP信息</a></dd>
+			<dd><a href="../gl/GlRefererAccess.html">GL系统Referer访问量TOP信息</a></dd>
+		</dl>
+	</li>
+  </ul>
+ </div>
+</body>
+</html>
