@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ['192.168.213.129',]
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,11 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'news_web',
     'DjangoUeditor',
     'mdeditor',
-    #'django_markdown',
+    'django_markdown',
+    'markdownx',
+    #'fluent_contents',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -129,6 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR,'static'), 
 STATICFILES_DIRS = os.path.join(BASE_DIR,'static'), #若存放静态文件的static目录在project目录下，则用该定义
 MEDIA_ROOT = os.path.join(BASE_DIR,'uploads')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/uploads/'

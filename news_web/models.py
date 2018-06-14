@@ -9,7 +9,8 @@ from django.utils.encoding import python_2_unicode_compatible
 from DjangoUeditor.models import UEditorField
 from django.urls import reverse
 from mdeditor.fields import MDTextField
-#from django_markdown.models import MarkdownField
+from markdownx.models import MarkdownxField
+from django_markdown.models import MarkdownField
 
 
 @python_2_unicode_compatible
@@ -40,10 +41,11 @@ class Article(models.Model):
     slug = models.CharField('网址', max_length=256, db_index=True)
 
     news_author = models.ForeignKey('auth.User',related_name='news_author', blank=True, null=True,on_delete=models.CASCADE, verbose_name='作者')
-    content = models.TextField('内容', default='', blank=True)
+    #content = models.TextField('内容', default='', blank=True)
     #content = UEditorField('内容',height=300,width=1000,default=u'',blank=True,imagePath="uploads/images/",toolbars='besttome',filePath='uploads/files/') 
     #content = MarkdownField()
     #content = MDTextField('内容',default=u'',blank=True)
+    content = MarkdownxField('内容',default=u'',blank=True)
 
     pub_date = models.DateTimeField('发表时间', auto_now_add=True, editable=True)
     update_time = models.DateTimeField('更新时间', auto_now=True, null=True)

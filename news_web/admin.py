@@ -1,8 +1,10 @@
 from django.contrib import admin
-#from django_markdown.admin import MarkdownModelAdmin
+from django_markdown.admin import MarkdownModelAdmin
 # Register your models here.
 from .models import Column,Article #two tables 
 from mdeditor.widgets import MDEditorWidget
+from markdownx.admin import MarkdownxModelAdmin
+from fluent_contents.admin import PlaceholderFieldAdmin
 
 class ColumnAdmin(admin.ModelAdmin):
   list_display = ('name','slug','intro','nav_display','home_display')
@@ -15,4 +17,5 @@ class ArticleAdmin(admin.ModelAdmin):
 
 admin.site.register(Column,ColumnAdmin)
 admin.site.register(Article,ArticleAdmin)
-#admin.site.register(MyModel, MarkdownModelAdmin)
+#admin.site.register(Article,MarkdownxModelAdmin)
+#admin.site.register(Article, MarkdownModelAdmin)

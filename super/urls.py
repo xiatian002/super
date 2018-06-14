@@ -29,7 +29,8 @@ urlpatterns = [
     url(r'^column/(?P<column_slug>[^/]+)/$',news_web_views.column_detail,name='column'),
     url(r'^news/(?P<pk>\d+)/(?P<article_slug>[^/]+)/$',news_web_views.article_detail,name='article'),
     url(r'mdeditor/', include('mdeditor.urls')),
-#    url(r'markdown/', include('django.markdown.urls'))
+    url(r'markdown/', include('django_markdown.urls')),
+    url(r'^markdownx/', include('markdownx.urls')),
 ]
 
 if settings.DEBUG:

@@ -25,7 +25,7 @@ def article_detail(request,pk, article_slug):
 
 def index(request):
   columns=Column.objects.all()
-  return render(request,'index.html',{'columns':columns})#此处的index.html需要放在项目的templates目录下不能放在app的templates下
+  #return render(request,'index.html',{'columns':columns})#此处的index.html需要放在项目的templates目录下不能放在app的templates下
   home_display_columns=Column.objects.filter(home_display=True)
   nav_display_columns=Column.objects.filter(nav_display=True)
   
