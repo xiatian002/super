@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+import os
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url,include#include 属于urls的模块
@@ -34,5 +35,6 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
+  MEDIA_ROOT = os.path.join(settings.BASE_DIR,'media')
   urlpatterns += static(
     settings.MEDIA_URL,document_root=settings.MEDIA_ROOT )
