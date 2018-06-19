@@ -3,8 +3,10 @@
 {{article.title}}
 {% endblock title %}
 {% block content %}
+<div id="article_content" style="margin-left:20px;margin-right:20px">
 <h1>文章标题：{{article.title}}</h1>
-  <div id="main">
+  <div id="main" style="margin-left:55px;margin-right:55px">
     {{article.content|safe}}<!--此处调用模板内的content，但是content在编辑时是被dueditor转义过的，加上|safe可以将转义转变成可以识别的格式-->
   </div>
+</div>
 {% endblock content%}

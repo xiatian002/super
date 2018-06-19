@@ -2,8 +2,8 @@
 {% block title %}
 {{ column.title}}
 {% endblock title %}
-
 {% block content %}
+<div id="column_list" style="margin-left:40px;">
 栏目简介：{{column.intro}}
 栏目文章列表：
 <ul>
@@ -13,5 +13,5 @@
           </li>
     {% endfor %}
 </ul>
-还需要完善！
+</div>
 {% endblock content %}
