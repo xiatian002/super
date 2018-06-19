@@ -11,3 +11,4 @@ Django版本：Django 2.1.0
 2、增加项目的启动和停止脚本，并将日志输出到日志文件
 3、上传到github
 4、增加后台使用markdownx编辑器的功能、使用django2.1版本后django-ueditor会报错所以选择markdownx替代
+5、增加上下文渲染器，使得每个页面都能显示导航栏
