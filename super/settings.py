@@ -26,7 +26,7 @@ SECRET_KEY = 'de1$ty4wi!(v2dmph7uz0n^d3q!a&*ouf)z7=wpa$li=2mvf3('
 DEBUG = True
 
 #ALLOWED_HOSTS = ['192.168.213.129',]
-ALLOWED_HOSTS = ['192.168.213.129',]
+ALLOWED_HOSTS = ['192.168.244.129',]
 
 
 # Application definition
