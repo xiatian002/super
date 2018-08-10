@@ -4,7 +4,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Column,Article
 from django.shortcuts import redirect
-
+from .update_domain import update_domain
+import dns,dns.update,dns.query
+#from domain_update import update_domain
 #def index(request):
  # return HttpResponse(u'欢迎观临自强新闻网站')
 
@@ -33,3 +35,7 @@ def index(request):
     'home_display_columns':home_display_columns,
     'nav_display_columns':nav_display_columns,
   })
+
+def domain_add(request):
+  return render(request,'news_web/domain_add.html')
+

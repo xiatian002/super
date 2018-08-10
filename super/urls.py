@@ -27,6 +27,7 @@ from news_web import update_domain
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('domain/',update_domain.update_domain),
+    path('dom_add/',news_web_views.domain_add,name="add"),
     url(r'^$',news_web_views.index,name="index"),
     url(r'^ueditor/',include(DjangoUeditor_urls)),#引用外部urls与引用admin不同需要嵌套在include方法中才可以使用
     url(r'^column/(?P<column_slug>[^/]+)/$',news_web_views.column_detail,name='column'),
