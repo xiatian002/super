@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}
+Domain Update Page
+{% endblock title%}
+{%block content%}
+  <div class="container">
+    <form enctype="multipart/form-data" method="post" >
+        {% csrf_token %}
+      <div class="file-loading">
+      <input type="file" class="file" name="compress_file" id="compress_file" /><!--使用bootstrap_fileinput上传工具，很美观-->
+      <!--<input type="file" name="compress_file" id="compress_file"/>-->
+      <i class="fa fa-check regII imgReg" style="display:none"></i>
+      </br>
+      </div>
+      <input type="button" value="上传" id="up_files"/>
+    </form> 
+    <span id="result"></span>
+  </div>
+
+<script>
+    $("#compress_file").fileinput({
+            theme: 'explorer-fa',
+            uploadUrl: "/upload_file/",
+            overwriteInitial: false,
+            initialPreviewAsData: true,
+    });
+//    $("compress_file").fileinput("upload");
+//    $(".btn.btn-default.btn-secondary.fileinput-upload.fileinput-upload-button").click(function(){
+//        var form_data = new FormData();
+//        form_data.append('compress_file',$("#compress_file")[0].files[0])
+//        $.ajax({
+//            url : "/upload_file",
+//            type : 'POST',
+//            cache: false,
+//            data: form_data,
+//            processData: false,
+//            contentType: false,
+//})
+//});
+</script>
+{%endblock content%}
